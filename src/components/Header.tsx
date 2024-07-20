@@ -7,7 +7,7 @@ const Header = () => {
       <div className="max-w-screen-xl flex flex-wrap  mx-auto p-4">
         <div className="flex">
           <div className="relative  md:block">
-            <input type="text" id="search-navbar" className="block w-[35rem] p-2  text-sm text-gray-900 border border-gray-300 rounded-md bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Suchen Sie nach Produkten, Marken und mehr" />
+            <input type="text" id="search-navbar" className="block w-[35rem] p-2  text-sm text-gray-900 border border-gray-300 rounded-md bg-gray-50 focus:ring-blue-500 focus:border-blue-500 " placeholder="Suchen Sie nach Produkten, Marken und mehr" />
             <div className="absolute inset-y-0 end-0 flex items-center pr-3 pointer-events-none">
               <span className="sr-only">Search icon</span>
               <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -62,7 +62,7 @@ const Header = () => {
           <li>
             <a href="#" className="block py-2 px-6 text-white hover:bg-gray-100 md:hover:bg-transparent md:border-0  ">Lüftung & Klimaanlage</a>
           </li>
-        
+
         </ul>
       </div>
     </nav>
