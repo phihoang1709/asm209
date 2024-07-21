@@ -1,6 +1,10 @@
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+
 const Products = () => {
   return (
     <div>
+      <Header/>
       <div className="grid-cols-4 grid my-10 px-32 *:w-[193px] *:h-[62px] *:bg-[#D2E8CD] *:border-[#D2E8CD]">
         <div className="flex items-center border p-1 rounded border-solid">
           <img
@@ -467,6 +471,7 @@ const Products = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
