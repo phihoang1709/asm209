@@ -58,7 +58,7 @@ const HomePage = () => {
 
         </div>
       </section>
-      <div className="bg-gray-100 flex items-center justify-center h-[88vh]">
+      <div className=" flex items-center justify-center h-[88vh] bg-[#f7f4f0]">
         <div className="grid grid-cols-4 grid-rows-2 gap-4 w-full max-w-screen-lg p-4 mt-2 h-[80vh]">
           <div className="col-span-2 row-span-2 bg-red-500 bg-[url('/assets/sell1.svg')] bg-cover">
             <p className="bg-white opacity-50 text-xl p-3 mt-5 font-bold">Garten Spaten</p>
@@ -78,8 +78,8 @@ const HomePage = () => {
         </div>
       </div>
 
-      <section>
-        <div className="bg-gray-100 flex items-center justify-center h-[88vh]">
+      <section className="">
+        <div className="bg-[#f7f4f0] flex items-center justify-center h-[88vh]">
           <div className="grid grid-cols-4 grid-rows-2 gap-4 w-full max-w-screen-lg mt-2  *:col-span-1 *:row-span-1 *:h-80">
             <div className="bg-[url('/assets/cate1.svg')] bg-cover">
               <p className="text-white ml-[50%] text-md p-1 mt-1 font-bold">Garten Spaten</p>
@@ -116,26 +116,28 @@ const HomePage = () => {
 
           </div>
         </div>
-      </section>
-      <div className="flex flex-col items-center justify-center">
-      <div className="*:text-2xl *:font-bold  text-[#505F4E] flex flex-row">
-        <p>Etwas abonnieren</p>
-        <p>*</p>
-      </div>
-      <div className="*:text-2xl *:font-bold  text-[#505F4E] flex flex-row">
-        <p>_</p>
-        <p>Etwas abonnieren</p>
-      </div>
-      <div className="flex">
-        <p>Get weekly update about our product on your email, no spam guaranteed we promise ✌️</p>
-        <div>
-          <input type="text" placeholder="youremail123@gmail.com" />
-          <button className="bg-[#656C66] text-white font-bold">ABONNIEREN</button>
-        </div>
-      </div>
-      </div>
-      <section>
+      </section >
 
+      <section className=" flex w-full justify-center items-center">
+        <div className="flex flex-col justify-center w-full h-[50vh] bg-gradient-to-br from-[#f7f4f0] to-[#BDDEB7]">
+          <div className="flex flex-col justify-center items-center">
+            <div className="*:text-2xl *:font-bold  text-[#505F4E] flex flex-row">
+              <p>Etwas abonnieren</p>
+              <p>*</p>
+            </div>
+            <div className="*:text-2xl *:font-bold  text-[#505F4E] flex flex-row">
+              <p>_</p>
+              <p>Etwas abonnieren</p>
+            </div>
+          </div>
+          <div className="flex items-center justify-center">
+            <p>Get weekly update about our product on your email, no spam guaranteed we promise ✌️</p>
+            <div>
+              <input type="text" className="border-0 p-4 px-10" placeholder="youremail123@gmail.com" />
+              <button className="bg-[#656C66] text-white font-bold p-4">ABONNIEREN</button>
+            </div>
+          </div>
+        </div>
       </section>
       <Footer />
     </div>
