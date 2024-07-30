@@ -1,5 +1,14 @@
-import useSWR from 'swr';
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
-export function getProducts() {
-    
-}
+import { Instance } from "../config/Instance";
+
+export const getAllProductAdmin = async () => {
+  const { data } = await Instance.get("/products");
+  console.log("thong tin moi cua data", data);
+  return data;
+};
+
+export const getOneProduct = async (id: number | string | undefined) => {
+  const { data } = await Instance.get(`/products/${id}`);
+  return data;
+};

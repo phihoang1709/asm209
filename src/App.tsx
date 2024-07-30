@@ -1,20 +1,14 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import Products from "./pages/Products";
-import ProductDetails from "./pages/ProductDetails";
-function App() {
+import { BrowserRouter } from "react-router-dom";
 
+import Index from "./Routes/Index";
+function App() {
   return (
     <>
-     <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage/>} />
-          <Route path="/products" element={<Products />}/>
-          <Route path="/products/:id" element={<ProductDetails />}/>
-        </Routes>
-     </BrowserRouter>
+      <BrowserRouter>
+        <Index />
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -96,7 +96,7 @@ const ProductDetails = () => {
             About
           </span>
 
-          <span className='text-[#665345] text-[20px]'>
+          <span className='text-[#665345] font-sans text-[20px]'>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
             type and scrambled i
@@ -162,6 +162,41 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
+      <div className="p-6 mt-12 max-w-4xl mx-auto">
+          <div className="mb-8 ">
+            <legend className="text-[40px] font-baloo font-semibold leading-10 text-[#505f4e]">
+              Etwas abonnieren*
+            </legend>
+            <legend className="text-[40px] font-baloo font-semibold leading-10 text-[#505f4e]">
+              _ Unser Newsletter
+            </legend>
+          </div>
+          <div className="flex flex-col md:flex-row gap-8 items-center">
+            <div className="flex-1 text-center md:text-left">
+              <p className="text-gray-600">
+                Get weekly updates about our product in your email. No spam
+                guaranteed—we promise ✌️
+              </p>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="relative flex items-center">
+                <img
+                  src="../../image/email.png"
+                  alt="Email Icon"
+                  className="absolute left-3"
+                />
+                <input
+                  type="text"
+                  placeholder="youremail123@gmail.com"
+                  className="pl-12 py-2 border border-gray-300 rounded w-full md:w-auto"
+                />
+              </div>
+              <button className="bg-[#656C66] text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+                ABONNIEREN
+              </button>
+            </div>
+          </div>
+        </div>
       <Footer />
     </>
   )

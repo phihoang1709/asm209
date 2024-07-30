@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": "5454",
+      "name": "phucuongle1",
+      "price": "12",
+      "image": "https://picsum.photos/2150/200",
+      "category": "2"
+    },
+    {
+      "id": "545454",
+      "name": "hahaha",
+      "price": "product",
+      "image": "https://picsum.photos/100/200",
+      "category": "1"
+    },
+    {
+      "id": "54",
+      "name": "phucuongle",
+      "price": "12312",
+      "image": "https://picsum.photos/100/200",
+      "category": "8428"
+    },
+    {
+      "id": "d0aa",
+      "name": "dsadá",
+      "price": "12",
+      "image": "https://picsum.photos/100/200",
+      "category": "8428"
+    }
+  ],
+  "categorys": [
+    {
+      "id": "2",
+      "name": "Category 21"
+    },
+    {
+      "id": "8428",
+      "name": "đasađá"
+    },
+    {
+      "id": "2671",
+      "name": "dấdsads"
+    }
+  ]
+}
