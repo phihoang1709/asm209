@@ -160,6 +160,70 @@ const ProductDetails = () => {
             </span>
 
           </div>
+
+          <div className='flex justify-center gap-4 w-full'>
+            <div className='flex flex-col w-1/2 justify-end'>
+              <span className='text-[#4E7C32] text-[17px]'>Aman gupta</span>
+              <span className='text-[11px] text-[#665345]'>I've been using this cleanser for about five or six months now and my acne
+                is almost completely gone. I really struggled for years with my skin and tried
+                everything possible but this is the only thing that managed to clear up my
+                skin. 100% recommend and will continue to use is for sure.</span>
+            </div>
+
+            <div className='w-1/2 flex flex-col gap-7'>
+              <div className='flex flex-col'>
+                <span className='text-[#4E7C32] text-[17px]'>Aman gupta</span>
+                <span className='text-[11px] text-[#665345]'>I've been using this cleanser for about five or six months now and my acne
+                  is almost completely gone. I really struggled for years with my skin and tried
+                  everything possible but this is the only thing that managed to clear up my
+                  skin. 100% recommend and will continue to use is for sure.</span>
+              </div>
+
+              <div className='flex flex-col'>
+                <span className='text-[#4E7C32] text-[17px]'>Aman gupta</span>
+                <span className='text-[11px] text-[#665345]'>I've been using this cleanser for about five or six months now and my acne
+                  is almost completely gone. I really struggled for years with my skin and tried
+                  everything possible but this is the only thing that managed to clear up my
+                  skin. 100% recommend and will continue to use is for sure.</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-6 mt-12 max-w-4xl mx-auto mb-20">
+            <div className="mb-8 ">
+              <legend className="text-[40px] font-baloo font-semibold leading-10 text-[#505f4e]">
+                Etwas abonnieren*
+              </legend>
+              <legend className="text-[40px] font-baloo font-semibold leading-10 text-[#505f4e]">
+                _ Unser Newsletter
+              </legend>
+            </div>
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="flex-1 text-center md:text-left">
+                <p className="text-gray-600">
+                  Get weekly updates about our product in your email. No spam
+                  guaranteed—we promise ✌️
+                </p>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="relative flex items-center">
+                  <img
+                    src="../../image/email.png"
+                    alt="Email Icon"
+                    className="absolute left-3"
+                  />
+                  <input
+                    type="text"
+                    placeholder="youremail123@gmail.com"
+                    className="pl-12 py-2 border border-gray-300 rounded w-full md:w-auto"
+                  />
+                </div>
+                <button className="bg-[#656C66] text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+                  ABONNIEREN
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
