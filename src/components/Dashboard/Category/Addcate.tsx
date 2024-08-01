@@ -39,6 +39,17 @@ const Addcate = () => {
             <span className="text-red-500">Vui lòng nhập name !</span>
           )}
           <br></br>
+          <input
+            className="border-2 border-black p-2 rounded w-72"
+            placeholder="image"
+            type="text"
+            {...form.register("image", { required: true })}
+          />{" "}
+          <br></br>
+          {form.formState.errors.image && (
+            <span className="text-red-500">Vui lòng nhập image !</span>
+          )}
+          <br></br>
           <button
             className="ml-20 my-4 border-2 bg-black  text-white  font-bold text-base border-black p-1 rounded"
             type="submit"

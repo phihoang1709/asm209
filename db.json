@@ -1,46 +1,49 @@
 {
   "products": [
     {
-      "id": "5454",
-      "name": "phucuongle1",
-      "price": "12",
-      "image": "https://picsum.photos/2150/200",
-      "category": "2"
+      "id": "1161",
+      "name": "Phu Cuong Le",
+      "price": "812003",
+      "image": "https://picsum.photos/100/200",
+      "category": "35be"
     },
     {
-      "id": "545454",
-      "name": "hahaha",
-      "price": "product",
+      "id": "dd02",
+      "name": "Le Phu Cuong",
+      "price": "812003",
       "image": "https://picsum.photos/100/200",
-      "category": "1"
+      "category": "aede"
     },
     {
-      "id": "54",
-      "name": "phucuongle",
-      "price": "12312",
+      "id": "ea34",
+      "name": "Cuong Le Phu",
+      "price": "812003",
       "image": "https://picsum.photos/100/200",
-      "category": "8428"
+      "category": "6840"
     },
     {
-      "id": "d0aa",
-      "name": "dsadá",
-      "price": "12",
+      "id": "825a",
+      "name": "Le Phu Cuong 2",
+      "price": "812003",
       "image": "https://picsum.photos/100/200",
-      "category": "8428"
+      "category": "aede"
     }
   ],
   "categorys": [
     {
-      "id": "2",
-      "name": "Category 21"
+      "id": "aede",
+      "name": "LPC",
+      "image": "https://picsum.photos/100/200"
     },
     {
-      "id": "8428",
-      "name": "đasađá"
+      "id": "35be",
+      "name": "PCL",
+      "image": "https://picsum.photos/100/200"
     },
     {
-      "id": "2671",
-      "name": "dấdsads"
+      "id": "6840",
+      "name": "CLP",
+      "image": "https://picsum.photos/100/200"
     }
   ]
 }

@@ -1,15 +1,38 @@
+import { useEffect, useState } from "react";
+import { getProductAdmin } from "../common/hooks/products/UseProductQuery";
+import { Link } from "react-router-dom";
+import UsequeryCategory from "../common/hooks/categorys/UsequeryCategory";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { Link } from "react-router-dom";
-import { getProductAdmin } from "../common/hooks/products/UseProductQuery";
 import { IProduct } from "../common/interfaces/Iproduct";
-import UsequeryCategory from "../common/hooks/categorys/UsequeryCategory";
 import { ICategory } from "../common/interfaces/Icategory";
 
 const HomePage = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredProducts, setFilteredProducts] = useState<IProduct[]>([]);
   const { data: products } = getProductAdmin();
   const { data: categories } = UsequeryCategory();
-  // console.log("thông tin id của product nhé", products)
+
+  useEffect(() => {
+    if (products) {
+      setFilteredProducts(products);
+    }
+  }, [products]);
+
+  const handleSearch = (value: string) => {
+    setSearchTerm(value);
+    if (products) {
+      const filtered = products.filter((product: IProduct) =>
+        product.name.toLowerCase().includes(value.toLowerCase())
+      );
+      setFilteredProducts(filtered);
+      if (filtered.length > 0) {
+        console.log("Found products:", filtered);
+      } else {
+        console.log("No products found.");
+      }
+    }
+  };
 
   const categoryMap = categories?.reduce(
     (acc: Record<string, string>, category: ICategory) => {
@@ -18,9 +41,10 @@ const HomePage = () => {
     },
     {}
   );
+
   return (
     <div className="min-w-full">
-      <Header />
+      <Header searchTerm={searchTerm} onSearch={handleSearch} />
       <main className="w-full h-[80vh] bg-cover bg-[#B5DCB0] bg-[url('/assets/banner.svg')]">
         <div className=" *:ml-24 pt-10 *:my-4">
           <p className="w-[50%] text-[#505F4E] text-6xl font-bold">
@@ -42,7 +66,7 @@ const HomePage = () => {
             Best sellers
           </p>
           <div className="grid grid-cols-4 gap-20 mx-20">
-            {products?.map((item: IProduct) => (
+            {filteredProducts.map((item: IProduct) => (
               <div className="flex flex-col" key={item.id}>
                 <img className="h-60" src={item.image} alt={item.name} />
                 <Link to={`/products/${item.id}`} className="font-bold">
@@ -88,56 +112,22 @@ const HomePage = () => {
       </div>
 
       <section className="">
-        <div className="bg-[#f7f4f0] flex items-center justify-center h-[88vh]">
+        <div className="bg-[#f7f4f0] flex items-center justify-center h-[97vh]">
           <div className="grid grid-cols-4 grid-rows-2 gap-4 w-full max-w-screen-lg mt-2  *:col-span-1 *:row-span-1 *:h-80">
-            <div className="bg-[url('/assets/cate1.svg')] bg-cover">
-              <p className="text-white ml-[50%] text-md p-1 mt-1 font-bold">
-                Garten Spaten
-              </p>
-              <p className="text-white ml-[50%] text-sm pl-1">30 items</p>
-            </div>
-            <div className="bg-[url('/assets/cate2.svg')] bg-cover">
-              <p className="text-white ml-[50%] text-md p-1 mt-1 font-bold">
-                Garten Spaten
-              </p>
-              <p className="text-white ml-[50%] text-sm pl-1">30 items</p>
-            </div>
-            <div className="bg-[url('/assets/cate3.svg')] bg-cover">
-              <p className="text-white ml-[50%] text-md p-1 mt-1 font-bold">
-                Garten Spaten
-              </p>
-              <p className="text-white ml-[50%] text-sm pl-1">30 items</p>
-            </div>
-            <div className="bg-[url('/assets/cate4.svg')] bg-cover">
-              <p className="text-white ml-[50%] text-md p-1 mt-1 font-bold">
-                Garten Spaten
-              </p>
-              <p className="text-white ml-[50%] text-sm pl-1">30 items</p>
-            </div>
-            <div className="bg-[url('/assets/cate5.svg')] bg-cover">
-              <p className="text-white ml-[50%] text-md p-1 mt-1 font-bold">
-                Garten Spaten
-              </p>
-              <p className="text-white ml-[50%] text-sm pl-1">30 items</p>
-            </div>
-            <div className="bg-[url('/assets/cate6.svg')] bg-cover">
-              <p className="text-white ml-[50%] text-md p-1 mt-1 font-bold">
-                Garten Spaten
-              </p>
-              <p className="text-white ml-[50%] text-sm pl-1">30 items</p>
-            </div>
-            <div className="bg-[url('/assets/cate7.svg')] bg-cover">
-              <p className="text-white ml-[50%] text-md p-1 mt-1 font-bold">
-                Garten Spaten
-              </p>
-              <p className="text-white ml-[50%] text-sm pl-1">30 items</p>
-            </div>
-            <div className="bg-[url('/assets/cate8.svg')] bg-cover">
-              <p className="text-white ml-[50%] text-md p-1 mt-1 font-bold">
-                Garten Spaten
-              </p>
-              <p className="text-white ml-[50%] text-sm pl-1">30 items</p>
-            </div>
+            {categories?.map((item: ICategory) => (
+              <div
+                className="bg-cover"
+                style={{ backgroundImage: `url(${item.image})` }}
+                key={item.id}
+              >
+                <Link to={`/category/${item.id}`}>
+                  <p className="text-white ml-[50%] text-md p-1 mt-1 font-bold">
+                    {item.name}
+                  </p>
+                </Link>
+                <p className="text-white ml-[50%] text-sm pl-1">30 items</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

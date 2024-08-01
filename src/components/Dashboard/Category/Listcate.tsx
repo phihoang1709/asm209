@@ -40,6 +40,7 @@ const Listcate = () => {
             <tr className="border-2 border-black">
               <th className="border-2 border-black p-10">STT</th>
               <th className="border-2 border-black p-10">NAME</th>
+              <th className="border-2 border-black p-10">Image</th>
               <th className="border-2 border-black p-10">ACTION</th>
             </tr>
           </thead>
@@ -48,6 +49,7 @@ const Listcate = () => {
               <tr className="border-2 border-black" key={item.id}>
                 <td className="border-2 border-black p-10">{index + 1}</td>
                 <td className="border-2 border-black p-10">{item.name}</td>
+                <td className="border-2 border-black p-10"><img src={item.image} className="w-[100px] h-[100px]" alt="" /></td>
                 <td className="border-2 border-black p-10">
                   <button
                     onClick={() => handleDelete(item.id!)}

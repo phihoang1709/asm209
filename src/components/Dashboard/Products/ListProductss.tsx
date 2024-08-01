@@ -40,9 +40,8 @@ const Listproductsss: React.FC = () => {
   });
 
   const handleDelete = (id: any) => {
-    console.log("Deleting product with ID:", id);
     if (window.confirm("Bạn có chắc muốn xoá không?")) {
-      deleteProduct(id);
+      deleteProduct({id} as unknown as any);
     }
   };
   

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import UsequeryCategory from "../common/hooks/categorys/UsequeryCategory";
 import { getProductAdmin } from "../common/hooks/products/UseProductQuery";
 import Footer from "../components/Footer";
@@ -7,13 +8,18 @@ import Header from "../components/Header";
 const Products = () => {
   const { data: products } = getProductAdmin();
   const { data: categories } = UsequeryCategory();
+  const { id } = useParams();
 
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<any>(id);
+
+  useEffect(() => {
+    setSelectedCategory(id);
+  }, [id]);
 
   const filteredProducts = selectedCategory
     ? products?.filter((product: any) => product.category === selectedCategory)
     : products;
-
+  
   return (
     <div>
       <Header />
@@ -178,13 +184,12 @@ const Products = () => {
                 Filter By Price
               </p>
               <img src="../../image/price_renge.png" alt="" />
-              <p className="font-inter font-normal text-[15px] leading-5 opacity-90 ml-2">
-                From $0 to $800
+              <p className="font-inter font-normal text-[15px] leading-5 opacity-30">
+                Price: $30 - $85
               </p>
-              <input
-                type="range"
-                className="w-[180px] h-1 bg-gray-300 rounded-full cursor-pointer"
-              />
+              <button className="bg-black text-white w-[180px] h-[50px] rounded mt-6">
+                Filter
+              </button>
             </div>
           </div>
         </div>
